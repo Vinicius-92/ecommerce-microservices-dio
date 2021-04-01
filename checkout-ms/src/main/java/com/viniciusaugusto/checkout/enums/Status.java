@@ -1,4 +1,4 @@
-package com.viniciusaugusto.checkoutms.enums;
+package com.viniciusaugusto.checkout.enums;
 
 public enum Status {
     CREATED,

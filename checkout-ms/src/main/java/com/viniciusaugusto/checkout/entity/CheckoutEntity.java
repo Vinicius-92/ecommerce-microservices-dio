@@ -1,6 +1,6 @@
-package com.viniciusaugusto.checkoutms.entity;
+package com.viniciusaugusto.checkout.entity;
 
-import com.viniciusaugusto.checkoutms.enums.Status;
+import com.viniciusaugusto.checkout.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

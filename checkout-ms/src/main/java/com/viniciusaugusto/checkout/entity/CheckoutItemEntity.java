@@ -1,4 +1,4 @@
-package com.viniciusaugusto.checkoutms.entity;
+package com.viniciusaugusto.checkout.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,33 +9,23 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
+
 @Entity
 @Audited
 @EntityListeners(AuditingEntityListener.class)
 @Builder
-@NoArgsConstructor@AllArgsConstructor
 @Data
-public class ShippingEntity {
+@NoArgsConstructor
+@AllArgsConstructor
+public class CheckoutItemEntity {
 
     @Id
     @GeneratedValue
     private Long id;
 
     @Column
-    private String address;
+    private String product;
 
-    @Column
-    private String complement;
-
-    @Column
-    private String country;
-
-    @Column
-    private String state;
-
-    @Column
-    private String zipCode;
-
-    @OneToOne(mappedBy = "shipping")
+    @ManyToOne
     private CheckoutEntity checkout;
 }

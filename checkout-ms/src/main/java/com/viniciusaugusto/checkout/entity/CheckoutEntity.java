@@ -48,6 +48,9 @@ public class CheckoutEntity {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private ShippingEntity shipping;
+
     @OneToMany(mappedBy = "checkout", cascade = CascadeType.ALL)
-    private List<CheckoutEntity> items;
+    private List<CheckoutItemEntity> items;
 }

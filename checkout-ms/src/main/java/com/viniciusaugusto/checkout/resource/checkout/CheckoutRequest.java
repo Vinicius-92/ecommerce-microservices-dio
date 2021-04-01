@@ -1,8 +1,6 @@
 package com.viniciusaugusto.checkout.resource.checkout;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -10,6 +8,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class CheckoutRequest implements Serializable {
 
     private String firstName;
@@ -19,7 +19,7 @@ public class CheckoutRequest implements Serializable {
     private String complement;
     private String country;
     private String state;
-    private String cep;
+    private String zipcode;
     private Boolean saveAddress;
     private Boolean saveInfo;
     private String paymentMethod;
